@@ -6,7 +6,7 @@ COPY go.mod .
 
 RUN go mod download
 
-COPY *.go .
+COPY cmd/main.go .
 
 RUN go build -o /app/main -ldflags="-s -w" .
 
