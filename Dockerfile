@@ -2,11 +2,11 @@ FROM golang:1.25-alpine AS builder
 
 WORKDIR /app
 
-COPY go.mod ./
+COPY go.mod .
 
 RUN go mod download
 
-COPY *.go ./
+COPY *.go .
 
 RUN go build -o /app/main -ldflags="-s -w" .
 
