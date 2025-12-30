@@ -10,8 +10,12 @@ COPY cmd/main.go .
 
 RUN go build -o /app/main -ldflags="-s -w" .
 
-FROM scratch
+FROM alpine:latest
+
+WORKDIR /root/
 
 COPY --from=builder /app/main /main
+
+EXPOSE 8080
 
 CMD ["/main"]
