@@ -3,7 +3,7 @@ name: STUDY PROJECT CI
 # Триггер: запускать этот workflow при каждом пуше в ветку "main"
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
 
 # Задачи, которые нужно выполнить
 jobs:
