@@ -10,7 +10,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { fmt.Fprint(w, "Hello, SRE!") })
 	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Print("logs: ok")
 		w.WriteHeader(http.StatusOK)
 		fmt.Fprint(w, "OK")
 	})
